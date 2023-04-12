@@ -59,4 +59,6 @@ def predict():
     global output
     text=(request.form.get('text'))
     output=model.predict(clf,text)
+    if len(text)>30:
+        text=text[0:30]+".."
     return render_template('dashboard.html',output=output,text=text,loaded=True, old=", ".join(old), new=", ".join(new),loggedin=current_user.is_authenticated)
