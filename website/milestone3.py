@@ -125,8 +125,8 @@ class ZoomFeatureClassifier:
         else:
             print("New feature")
 
-        # # Return the prediction (as a string)
-        # if prediction[0] == 0:
-        #     return "Old feature"
-        # else:
-        #     return "New feature"
+        # Return the prediction (as a string)
+        if prediction[0] == 0:
+            return "Old feature"
+        else:
+            return "New feature"
